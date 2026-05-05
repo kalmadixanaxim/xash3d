@@ -198,7 +198,7 @@ static qboolean CL_GetBoneTarget( cl_entity_t *ent, vec3_t target_pos )
 			Matrix3x4_ConcatTransforms( world_bones[i], world_bones[pbones[i].parent], local_matrix );
 	}
 
-	int bone_idx = (hdr->numbones > 11) ? 11 : 0;
+	bone_idx = (hdr->numbones > 11) ? 11 : 0;
 	// Use Matrix3x4_VectorTransform to get bone's world position from the concatenation
 	// world_bones[bone_idx] is the transformation matrix for the bone
 	// We want the origin of the bone, which is the 4th column (index 3)
