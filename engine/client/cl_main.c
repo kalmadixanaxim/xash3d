@@ -190,6 +190,7 @@ static qboolean CL_FindAimbotTarget( const vec3_t source, const vec3_t angles, v
 	pmtrace_t tr;
 	int i;
 	int players_found = 0;
+	char dbg[64];
 	float fov = k_fov.value;
 
 	AngleVectors( angles, forward, NULL, NULL );
